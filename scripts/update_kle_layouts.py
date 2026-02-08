@@ -168,6 +168,10 @@ def parse_kle(path: Path) -> KLELayout:
                         state.oneshot_style[key] = value
                     else:
                         state.style[key] = value
+
+                # In KLE, setting `f` resets the per-label font array `fa`.
+                if "f" in item and "fa" not in item:
+                    state.style.pop("fa", None)
             else:
                 combined_style = dict(state.style)
                 combined_style.update(state.oneshot_style)

@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from update_kle_layouts import (
+    KLELayout,
     KeyContent,
     build_move_map,
     layer_name_from_filename,
@@ -252,6 +253,44 @@ def update_layout(
     return stats, warnings
 
 
+def swap_bottom_text_blocks(layout: KLELayout) -> bool:
+    """Swap the two large text-block decals below the keyboard.
+
+    Returns True if a swap was performed.
+    """
+    for row in layout.rows:
+        decals = [
+            key for key in row
+            if key.style.get("d") and key.w >= 4 and key.h >= 3
+        ]
+        if (
+            len(decals) == 2
+            and all("Combo T1+T2+T3" in k.label for k in decals)
+        ):
+            decals[0].label, decals[1].label = decals[1].label, decals[0].label
+            for d in decals:
+                d.label = d.label.replace(
+                    'combos left"', 'combos __tmp__"'
+                ).replace(
+                    'combos right"', 'combos left"'
+                ).replace(
+                    'combos __tmp__"', 'combos right"'
+                ).replace(
+                    'Typing layer', '__TMP_LAYER__'
+                ).replace(
+                    'Gaming layer', 'Typing layer'
+                ).replace(
+                    '__TMP_LAYER__', 'Gaming layer'
+                )
+                d.label = re.sub(
+                    r"<li>([^<]*?) = ([^<]*?)</li>",
+                    r"<li>\2 = \1</li>",
+                    d.label,
+                )
+            return True
+    return False
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Update KLE exports by diffing ZMK .keymap files.")
     parser.add_argument(
@@ -362,15 +401,20 @@ def main() -> int:
             kp_label_map,
         )
 
+        if swap_bottom_text_blocks(layout):
+            stats["text_swapped"] = 1
+
         output_data = serialize_kle(layout)
         out_path = kle_out / path.name
         out_path.write_text(json.dumps(output_data, indent=2), encoding="utf-8")
 
+        swap_text = " text_swapped" if stats.get("text_swapped") else ""
         warn_text = "" if not warnings else f" warnings={len(warnings)}"
         print(
             f"- {path.name}: updated={stats['updated']} moved={stats['moved']} "
             f"reused={stats['reused']} from_global={stats['from_global']} "
-            f"generated={stats['generated']} missing_in_kle={stats['missing_in_kle']}{warn_text}"
+            f"generated={stats['generated']} missing_in_kle={stats['missing_in_kle']}"
+            f"{swap_text}{warn_text}"
         )
         for warning in warnings:
             print(f"  - {warning}")
