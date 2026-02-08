@@ -10417,7 +10417,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 16
+#define MOUSE_SCALER_SLOW 1 4
 #endif
 
 //
@@ -10425,7 +10425,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_FAST
-#define MOUSE_SCALER_FAST 4 1
+#define MOUSE_SCALER_FAST 2 1
 #endif
 
 //
@@ -10433,7 +10433,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_WARP
-#define MOUSE_SCALER_WARP 12 1
+#define MOUSE_SCALER_WARP 4 1
 #endif
 /*HACK*/};
 #ifdef ENABLE_MOUSE_KEYS
