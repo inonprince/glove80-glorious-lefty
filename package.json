@@ -1,0 +1,13 @@
+{
+  "name": "kle-renderer-tools",
+  "private": true,
+  "description": "Render KLE JSON using keyboard-layout-editor renderer",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "dot": "1.1.3",
+    "font-awesome": "4.7.0",
+    "html2canvas": "1.4.1",
+    "puppeteer": "22.8.2",
+    "stylus": "0.63.0"
+  }
+}
