@@ -386,7 +386,7 @@
       #ifdef LAYER_Cursor
       Cursor {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             ___ COR COR COR COR GDN
           ___ COR PUR PUR COR GDN                                             GDN COR COR COR COR GDN
           YLW AZU AZU AZU AZU GDN                                             GDN YLW GRN CYN MAJ GDN
@@ -401,7 +401,7 @@
       Number {
         bindings = <
           KVM GDN GDN GDN GDN                                             ___ ___ ___ ___ ___
-          GDN SPG SPG SPG SPG TEA                                             ___ COR COR COR COR ___
+          SPG SPG SPG SPG SPG TEA                                             ___ COR COR COR COR ___
           SPG SPG GOL GOL GOL TEA                                             GOL COR COR COR COR GDN
           SPG SPG GOL GOL GOL TEA                                             TEA YLW GRN CYN MAJ YLW
           SPG SPG GOL GOL GOL TEA     SPG SPG SPG     ___ ___ ___     GDN PUR SPG SPG SPG TEA
@@ -414,7 +414,7 @@
       #ifdef LAYER_Function
       Function {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           AZU AZU AZU AZU AZU AZU                                             ___ COR COR COR COR ___
           PNK PNK PNK PNK PNK GDN                                             GDN COR COR COR COR ___
           PNK PNK PNK PNK PNK GDN                                             GDN YLW GRN CYN MAJ YLW
@@ -442,7 +442,7 @@
       #ifdef LAYER_Symbol
       Symbol {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             CHU CHU AZU AZU PNK COR
           ___ COR COR COR COR CHU                                             GDN AZU AZU AZU AZU PUR
           ___ COR COR COR COR CHU                                             GDN GDN BLU SPG GDN GDN
@@ -456,7 +456,7 @@
       #ifdef LAYER_Mouse
       Mouse {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___ ___
           ___ GDN GDN GDN GDN GDN                                             ___ SPG AZU SPG ___ ___
           SPG PUR WRP SLO FST SPG                                             SPG AZU AZU AZU SPG ___
@@ -470,7 +470,7 @@
       #ifdef LAYER_MouseFast
       MouseFast {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___ ___
           ___ GDN GDN GDN GDN GDN                                             ___ SPG FST SPG ___ ___
           GDN PUR WRP SLO FST SPG                                             SPG FST FST FST SPG ___
@@ -484,7 +484,7 @@
       #ifdef LAYER_MouseWarp
       MouseWarp {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___ ___
           ___ GDN GDN GDN GDN GDN                                             ___ SPG WRP SPG ___ ___
           GDN PUR WRP SLO FST SPG                                             SPG WRP WRP WRP SPG ___
@@ -498,7 +498,7 @@
       #ifdef LAYER_MouseSlow
       MouseSlow {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___ ___
           ___ GDN GDN GDN GDN GDN                                             ___ SPG SLO SPG ___ ___
           GDN PUR WRP SLO FST SPG                                             SPG SLO SLO SLO SPG ___
@@ -512,7 +512,7 @@
       #ifdef LAYER_System
       System {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___ ___
           ___ PNK AZU SPG GDN COR                                             COR GDN SPG AZU PNK ___
           ___ PNK AZU SPG GDN COR                                             COR GDN SPG AZU PNK ___
@@ -540,7 +540,7 @@
       #ifdef LAYER_Typing
       Typing {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
@@ -555,7 +555,7 @@
       Gaming {
         bindings = <
           KVM ___ ___ ___ COR                                             TEA TEA TEA TEA TEA
-          ORN GDN GDN GDN GDN GDN                                     TEA TEA TEA TEA TEA TEA
+          ___ GDN GDN GDN GDN GDN                                     TEA TEA TEA TEA TEA TEA
           ___ GDN GDN GDN GDN GDN                                     ___ ___ ___ ___ ___ TEA
           ___ COR ___ AZU ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ YLW AZU AZU AZU RED     YLW CYN ___     ORN AZU COR     ___ ___ ___ ___ ___ ___
@@ -568,7 +568,7 @@
       #ifdef LAYER_Lower
       Lower {
         bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ GOL GOL GOL GOL GOL                                     GOL GOL GOL GOL GOL ___
           ___ MAJ CYN GRN YLW SPG                                     SPG YLW GRN CYN MAJ ___

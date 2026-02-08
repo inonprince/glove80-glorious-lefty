@@ -131,8 +131,17 @@ static int on_kvm_state_color_pressed(struct zmk_behavior_binding *binding,
     return kvm_last_is_two ? 0xFF0000 : 0;
 }
 
+static int on_kvm_state_color_released(struct zmk_behavior_binding *binding,
+                                       struct zmk_behavior_binding_event event) {
+    ARG_UNUSED(binding);
+    ARG_UNUSED(event);
+
+    return ZMK_BEHAVIOR_OPAQUE;
+}
+
 static const struct behavior_driver_api kvm_state_color_driver_api = {
     .binding_pressed = on_kvm_state_color_pressed,
+    .binding_released = on_kvm_state_color_released,
     .locality = BEHAVIOR_LOCALITY_GLOBAL,
 #if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
     .get_parameter_metadata = zmk_behavior_get_empty_param_metadata,
