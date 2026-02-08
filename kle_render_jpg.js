@@ -464,12 +464,43 @@ function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, "-");
 }
 
+const LAYER_ORDER = [
+  "Base Layer Diagram Dvorak",
+  "Cursor Layer Diagram",
+  "Symbol Layer Diagram",
+  "Number Layer Diagram",
+  "Mouse Layer Diagram",
+  "Function Layer Diagram",
+  "Emoji Layer Diagram",
+  "System Layer Diagram",
+  "Lower Layer Diagram",
+  "Magic Layer Diagram",
+  "Gaming Layer Diagram",
+  "Typing Layer Diagram",
+  "World Layer Diagram",
+  "Base Layer Diagram Colemak",
+  "Base Layer Diagram Enthium",
+  "Base Layer Diagram QWERTY",
+  "Factory Layer Diagram",
+];
+
+function sortLayers(layers) {
+  const orderIndex = new Map(LAYER_ORDER.map((name, i) => [name, i]));
+  return [...layers].sort((a, b) => {
+    const ai = orderIndex.has(a.name) ? orderIndex.get(a.name) : LAYER_ORDER.length;
+    const bi = orderIndex.has(b.name) ? orderIndex.get(b.name) : LAYER_ORDER.length;
+    return ai - bi;
+  });
+}
+
 function generateLayersMd(layers, mdDir) {
-  const tocLines = layers.map(
+  const sorted = sortLayers(layers);
+
+  const tocLines = sorted.map(
     ({ name }) => `- [${name}](#${slugify(name)})`
   );
 
-  const sectionLines = layers.map(({ name, imgPath }) => {
+  const sectionLines = sorted.map(({ name, imgPath }) => {
     const relativePath = path.relative(mdDir, imgPath);
     return `## ${name}\n\n![${name}](${relativePath})`;
   });
