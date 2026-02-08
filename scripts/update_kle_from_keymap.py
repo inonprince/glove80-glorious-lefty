@@ -281,6 +281,12 @@ def swap_bottom_text_blocks(layout: KLELayout) -> bool:
                     'Gaming layer', 'Typing layer'
                 ).replace(
                     '__TMP_LAYER__', 'Gaming layer'
+                ).replace(
+                    'RShift (tap: sticky one-shot)', '__TMP_SHIFT__'
+                ).replace(
+                    'Shift (tap: sticky one-shot)', 'RShift (tap: sticky one-shot)'
+                ).replace(
+                    '__TMP_SHIFT__', 'Shift (tap: sticky one-shot)'
                 )
                 d.label = re.sub(
                     r"<li>([^<]*?) = ([^<]*?)</li>",

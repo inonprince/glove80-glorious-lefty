@@ -1584,14 +1584,14 @@ combos {
   combo_sticky_shift_left {
     timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T4>;
-    bindings = <&sticky_key_modtap LSFT LSFT>;
+    bindings = <&sticky_key_modtap RSFT RSFT>;
     layers = <0 1 2 3 4 5>;
   };
 
   combo_sticky_shift_right {
     timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T4>;
-    bindings = <&sticky_key_modtap RSFT RSFT>;
+    bindings = <&sticky_key_modtap LSFT LSFT>;
     layers = <0 1 2 3 4 5>;
   };
 
