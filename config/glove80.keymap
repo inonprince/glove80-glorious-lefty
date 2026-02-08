@@ -1529,12 +1529,12 @@ combos {
     layers = <0 1 2 3 4>;
   };
 
-  // T2+T5
-  #if defined(_A_TAB) && defined(LAYER_Cursor)
+  // T2+T5: Contexts app switcher (Cmd+Tab with Typing layer for search filtering)
+  #if defined(_A_TAB) && defined(LAYER_Typing)
   combo_alt_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T5>;
-    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
+    bindings = <&mod_tab_chord _A_TAB LAYER_Typing>;
     layers = <0 1 2 3 4>;
   };
   #endif
@@ -10638,7 +10638,7 @@ macros {
  &trans              &trans              &trans              &trans              &trans  &trans                                                                                            &trans               &trans               &trans               &trans               &trans  &trans
  &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                            &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
  &trans              &trans              &trans              &trans              &trans  &trans  &kp KEY_LH_T1         &trans         &trans         &trans         &trans  &kp KEY_RH_T1  &trans               &trans               &trans               &trans               &trans  &trans
- &trans              &trans              &trans              &trans     &kp KEY_LH_C2R6          &kp KEY_LH_T4  &kp KEY_LH_T5  &kp KEY_LH_T6  &kp KEY_RH_T6  &kp KEY_RH_T5  &kp KEY_RH_T4              &kp KEY_RH_C2R6               &trans               &trans               &trans  &trans
+ &trans              &trans              &trans              &trans     &kp KEY_LH_C2R6          &kp KEY_LH_T4  &kp KEY_LH_T5  &kp KEY_LH_T6  &kp KEY_RH_T6  &kp KEY_RH_T5  &kp KEY_RH_T4              &kp LEFT            &kp DOWN               &kp UP            &kp RIGHT  &trans
             >;
         };
 
