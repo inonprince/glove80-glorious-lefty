@@ -390,7 +390,7 @@
           ___ ___ ___ ___ ___ ___                                             ___ COR COR COR COR GDN
           ___ COR PUR PUR COR GDN                                             GDN COR COR COR COR GDN
           YLW AZU AZU AZU AZU GDN                                             GDN YLW GRN CYN MAJ GDN
-          PNK GDN GDN GDN GDN GDN     SPG SPG SPG     ___ COR COR     GDN AZU AZU AZU AZU GDN
+          PNK GDN GDN GDN GDN GDN     SPG SPG SPG     ___ ___ ___     GDN AZU AZU AZU AZU GDN
           PNK PUR PUR PUR PUR     SPG SPG SPG     ___ ___ RED     AZU AZU AZU AZU GDN
         >;
         layer-id = <LAYER_Cursor>;
@@ -443,11 +443,11 @@
       Symbol {
         bindings = <
           KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___ ___                                             CHU CHU AZU AZU PNK COR
-          ___ COR COR COR COR CHU                                             GDN AZU AZU AZU AZU PUR
-          ___ COR COR COR COR CHU                                             GDN GDN BLU SPG GDN GDN
-          YLW PUR PNK PNK PNK CHU     ___ ___ ___     GDN CHU PUR     GDN SPG SPG SPG SPG PUR
-          ___ MAJ CYN GRN YLW     RED ___ ___     GDN GDN GDN     BLU PNK PNK BLU COR
+          ___ ___ ___ ___ ___ ___                                             GDN PUR PUR PUR PNK PNK
+          ___ COR COR COR COR CHU                                             GDN AZU AZU AZU AZU GDN
+          ___ COR COR COR COR CHU                                             AZU AZU AZU AZU SPG SPG
+          YLW PUR PNK PNK PNK CHU     ___ ___ ___     SPG GDN PNK     SPG SPG SPG SPG PUR PUR
+          ___ MAJ CYN GRN YLW     RED ___ ___     PUR GDN PUR     PNK PNK GDN PNK GDN
         >;
         layer-id = <LAYER_Symbol>;
       };
@@ -573,7 +573,7 @@
           ___ GOL GOL GOL GOL GOL                                     GOL GOL GOL GOL GOL ___
           ___ MAJ CYN GRN YLW SPG                                     SPG YLW GRN CYN MAJ ___
           ___ SPG SPG SPG SPG SPG     RED ___ BLU     BLU ___ RED     SPG PNK PNK SPG PNK ___
-          ___ ___ ___ ___ RED         RED RED COR     COR RED RED         RED ___ ___ ___ ___
+          ___ ___ ___ ___ RED         RED RED RED     RED RED RED         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_Lower>;
       };
@@ -10583,7 +10583,7 @@ macros {
                         &none                       &kp SQT                     &kp COMMA                       &kp DOT                         &kp P   &kp Y                                                                                                                                                            &kp F                          &kp G                          &kp C                          &kp R                          &kp L                     &kp SLASH
                     &kp EQUAL  &LeftPinky (A, LAYER_Dvorak)  &LeftRingy (O, LAYER_Dvorak)  &LeftMiddy (E, LAYER_Dvorak)  &LeftIndex (U, LAYER_Dvorak)   &kp I                                                                                                                                                            &kp D  &RightIndex (H, LAYER_Dvorak)  &RightMiddy (T, LAYER_Dvorak)  &RightRingy (N, LAYER_Dvorak)  &RightPinky (S, LAYER_Dvorak)                     &kp MINUS
  &sticky_key_modtap LSFT LSFT                      &kp SEMI                         &kp Q                         &kp J                         &kp K   &kp X     &thumb LAYER_System ESC            &parang_left    &parang_right                  &kp _HOME                   &kp _END  &thumb LAYER_Function ENTER   &kp B                          &kp M                          &kp W                          &kp V                          &kp Z  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                     &kp GRAVE                      &kp LBKT                      &kp RBKT       &thumb LAYER_Emoji BSLH          &thumb LAYER_Symbol BACKSPACE  &thumb LAYER_Mouse TAB  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Number DELETE  &space LAYER_Cursor SPACE             &thumb LAYER_World PAGE_UP           &msc MOUSE_SCROLL_UP         &msc MOUSE_SCROLL_DOWN                      &kp PG_DN          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                     &kp GRAVE          &msc MOUSE_SCROLL_UP        &msc MOUSE_SCROLL_DOWN       &thumb LAYER_Emoji BSLH          &thumb LAYER_Symbol BACKSPACE  &thumb LAYER_Mouse TAB  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Number DELETE  &space LAYER_Cursor SPACE             &thumb LAYER_World PAGE_UP                      &kp LBKT                      &kp RBKT                      &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
@@ -10594,7 +10594,7 @@ macros {
                         &none                          &kp Q                          &kp Y                          &kp O                          &kp U  &kp EQUAL                                                                                                                                                                       &kp X                           &kp L                           &kp D                           &kp P                           &kp Z                         &none
                         &kp B  &LeftPinky (C, LAYER_Enthium)  &LeftRingy (I, LAYER_Enthium)  &LeftMiddy (A, LAYER_Enthium)  &LeftIndex (E, LAYER_Enthium)  &kp MINUS                                                                                                                                                                       &kp K  &RightIndex (H, LAYER_Enthium)  &RightMiddy (T, LAYER_Enthium)  &RightRingy (N, LAYER_Enthium)  &RightPinky (S, LAYER_Enthium)                         &kp W
  &sticky_key_modtap LSFT LSFT                        &kp SQT                      &kp COMMA                        &kp DOT                       &kp FSLH   &kp SEMI  &thumb LAYER_System ESC            &parang_left              &parang_right                  &kp _HOME                       &kp _END  &thumb LAYER_Function ENTER   &kp J                           &kp M                           &kp G                           &kp F                           &kp V  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                      &kp GRAVE                       &kp LBKT                       &kp RBKT        &thumb LAYER_Emoji BSLH              &thumb LAYER_Symbol SPACE  &thumb LAYER_Mouse TAB  &thumb LAYER_Lower INSERT  &thumb LAYER_Lower DELETE  &thumb LAYER_Number BACKSPACE      &space LAYER_Cursor R              &thumb LAYER_World PAGE_UP            &msc MOUSE_SCROLL_UP          &msc MOUSE_SCROLL_DOWN                       &kp PG_DN          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                      &kp GRAVE           &msc MOUSE_SCROLL_UP        &msc MOUSE_SCROLL_DOWN        &thumb LAYER_Emoji BSLH              &thumb LAYER_Symbol SPACE  &thumb LAYER_Mouse TAB  &thumb LAYER_Lower INSERT  &thumb LAYER_Lower DELETE  &thumb LAYER_Number BACKSPACE      &space LAYER_Cursor R              &thumb LAYER_World PAGE_UP                       &kp LBKT                       &kp RBKT                       &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
@@ -10605,7 +10605,7 @@ macros {
                         &none                          &kp Q                          &kp W                          &kp F                          &kp P   &kp G                                                                                                                                                            &kp J                           &kp L                           &kp U                           &kp Y                        &kp SEMI                     &kp MINUS
                     &kp EQUAL  &LeftPinky (A, LAYER_Colemak)  &LeftRingy (R, LAYER_Colemak)  &LeftMiddy (S, LAYER_Colemak)  &LeftIndex (T, LAYER_Colemak)   &kp D                                                                                                                                                            &kp H  &RightIndex (N, LAYER_Colemak)  &RightMiddy (E, LAYER_Colemak)  &RightRingy (I, LAYER_Colemak)  &RightPinky (O, LAYER_Colemak)                       &kp SQT
  &sticky_key_modtap LSFT LSFT                          &kp Z                          &kp X                          &kp C                          &kp V   &kp B     &thumb LAYER_System ESC            &parang_left    &parang_right                  &kp _HOME                   &kp _END  &thumb LAYER_Function ENTER   &kp K                           &kp M                       &kp COMMA                         &kp DOT                        &kp FSLH  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                      &kp GRAVE                       &kp LBKT                       &kp RBKT        &thumb LAYER_Emoji BSLH          &thumb LAYER_Symbol BACKSPACE  &thumb LAYER_Mouse TAB  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Number DELETE  &space LAYER_Cursor SPACE              &thumb LAYER_World PAGE_UP            &msc MOUSE_SCROLL_UP          &msc MOUSE_SCROLL_DOWN                       &kp PG_DN          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                      &kp GRAVE           &msc MOUSE_SCROLL_UP        &msc MOUSE_SCROLL_DOWN        &thumb LAYER_Emoji BSLH          &thumb LAYER_Symbol BACKSPACE  &thumb LAYER_Mouse TAB  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Number DELETE  &space LAYER_Cursor SPACE              &thumb LAYER_World PAGE_UP                       &kp LBKT                       &kp RBKT                       &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
@@ -10616,7 +10616,7 @@ macros {
                         &none                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                                            &kp Y                          &kp U                          &kp I                          &kp O                             &kp P                     &kp MINUS
                     &kp EQUAL  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                                            &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)                       &kp SQT
  &sticky_key_modtap LSFT LSFT                         &kp Z                         &kp X                         &kp C                         &kp V   &kp B     &thumb LAYER_System ESC            &parang_left    &parang_right                  &kp _HOME                   &kp _END  &thumb LAYER_Function ENTER   &kp N                          &kp M                      &kp COMMA                        &kp DOT                          &kp FSLH  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                     &kp GRAVE                      &kp LBKT                      &kp RBKT       &thumb LAYER_Emoji BSLH          &thumb LAYER_Symbol BACKSPACE  &thumb LAYER_Mouse TAB  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Number DELETE  &space LAYER_Cursor SPACE             &thumb LAYER_World PAGE_UP           &msc MOUSE_SCROLL_UP         &msc MOUSE_SCROLL_DOWN                         &kp PG_DN          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                     &kp GRAVE          &msc MOUSE_SCROLL_UP        &msc MOUSE_SCROLL_DOWN       &thumb LAYER_Emoji BSLH          &thumb LAYER_Symbol BACKSPACE  &thumb LAYER_Mouse TAB  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Number DELETE  &space LAYER_Cursor SPACE             &thumb LAYER_World PAGE_UP                      &kp LBKT                      &kp RBKT                         &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
