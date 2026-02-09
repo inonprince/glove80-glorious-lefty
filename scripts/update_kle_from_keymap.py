@@ -303,6 +303,14 @@ def swap_bottom_text_blocks(layout: KLELayout) -> bool:
                     'Win+Tab menu (tap: switch)', 'Ctrl+Tab menu (tap: switch)'
                 ).replace(
                     '__TMP_TAB_MENU__', 'Win+Tab menu (tap: switch)'
+                ).replace(
+                    'sticky RAlt (AltGr) = Combo T1+T2', 'sticky LGUI = Combo T1+T2'
+                ).replace(
+                    'sticky Globe (macOS) or Win = Combo T2+T3', 'sticky RAlt = Combo T2+T3'
+                ).replace(
+                    'Combo T1+T2 = sticky RAlt (AltGr)', 'Combo T1+T2 = sticky RGUI'
+                ).replace(
+                    'Combo T2+T3 = sticky Globe (macOS) or Win', 'Combo T2+T3 = sticky RAlt'
                 )
                 d.label = re.sub(
                     r"<li>([^<]*?) = ([^<]*?)</li>",

@@ -1502,14 +1502,14 @@ combos {
   combo_sticky_globe_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T3>;
-    bindings = <&sk _GLOBE>;
+    bindings = <&sk RALT>;
     layers = <0 1 2 3 4>;
   };
 
   combo_sticky_globe_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T3>;
-    bindings = <&sk _GLOBE>;
+    bindings = <&sk LALT>;
     layers = <0 1 2 3 4>;
   };
 
@@ -1518,14 +1518,14 @@ combos {
   combo_sticky_altgr_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T2>;
-    bindings = <&sk RALT>;
+    bindings = <&sk RGUI>;
     layers = <0 1 2 3 4>;
   };
 
   combo_sticky_altgr_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T2>;
-    bindings = <&sk RALT>;
+    bindings = <&sk LGUI>;
     layers = <0 1 2 3 4>;
   };
 
