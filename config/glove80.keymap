@@ -10933,5 +10933,5 @@ macros {
 
 &hid_trackball_interface {
     automouse-layer = <LAYER_Trackball>;
-    automouse-layer-timeout-ms = <600>;
+    automouse-layer-timeout-ms = <0>;
 };
