@@ -664,6 +664,14 @@
 / {
     behaviors {
         ZMK_TD_LAYER(lower, LAYER_Lower)
+
+        scroll_ht: scroll_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kt>;
+        };
     };
 };
 
@@ -10868,8 +10876,8 @@ macros {
  &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans     &trans     &trans     &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans     &trans     &trans     &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                              &trans  &trans     &trans     &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB2  &mkp MB1  &mkp MB3  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &tbs_mt 0 0  &trans     &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &mkp MB1  &kp INT3  &scroll_ht INT1 INT1  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &mkp MB2  &kp LANG1     &trans     &trans  &trans
             >;
         };
 
