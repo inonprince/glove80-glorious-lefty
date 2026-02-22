@@ -388,10 +388,10 @@
       Cursor {
         bindings = <
           KVM ___ ___ ___ ___                                             ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___ ___                                             ___ COR COR COR COR GDN
+          ___ ___ ___ ___ ___ ___                                             ___ AZU AZU AZU AZU GDN
           ___ COR PUR PUR COR GDN                                             GDN COR COR COR COR GDN
           YLW AZU AZU AZU AZU GDN                                             GDN YLW GRN CYN MAJ GDN
-          PNK GDN GDN GDN GDN GDN     SPG SPG SPG     ___ ___ ___     GDN AZU AZU AZU AZU GDN
+          PNK GDN GDN GDN GDN GDN     SPG SPG SPG     ___ ___ ___     GDN COR COR COR COR GDN
           PNK PUR PUR PUR PUR     SPG SPG SPG     ___ ___ RED     AZU AZU AZU AZU GDN
         >;
         layer-id = <LAYER_Cursor>;
