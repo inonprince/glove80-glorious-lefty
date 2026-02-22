@@ -616,9 +616,10 @@
       "a": 7,
       "f": 3,
       "g": false,
-      "c": "#ffccbc"
+      "c": "#ffccbc",
+      "n": true
     },
-    "Escape",
+    "Back space",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -660,7 +661,7 @@
       "x": 3.0,
       "y": -0.5
     },
-    "Space\n\n\n\nAltGr",
+    "Escape",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -670,10 +671,9 @@
       "a": 7,
       "f": 3,
       "g": false,
-      "c": "#ffccbc",
-      "n": true
+      "c": "#ffccbc"
     },
-    "Back space",
+    "Enter",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -786,7 +786,7 @@
       "g": false,
       "c": "#ffccbc"
     },
-    "Enter",
+    "Space\n\n\n\nAltGr",
     {
       "t": "#000000",
       "p": "CHICKLET",

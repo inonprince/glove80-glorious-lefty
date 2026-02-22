@@ -10797,8 +10797,8 @@ macros {
             bindings = <
   &none               &none               &none               &none               &none                                                                                                            &none          &none         &none        &none             &none
   &none               &none               &none               &none               &none      &none                                                                             &kp LS(N1)     &kp LS(N7)    &kp LS(N3)    &kp LS(N4)    &kp GRAVE  &triple_backtick
-  &none             &kp ESC             &kp INS             &kp DEL         &kp LS(TAB)    &kp DOT                                                                           &kp LS(FSLH)       &kp LBKT      &kp RBKT  &kp LS(COMMA)   &kp LS(DOT)          &kp SEMI
-  &none             &kp RET           &kp SPACE            &kp BSPC             &kp TAB  &kp COMMA                                                                             &kp LS(N9)     &kp LS(N0)  &kp LS(LBKT)  &kp LS(RBKT)     &kp EQUAL        &kp LS(N6)
+  &none            &kp BSPC             &kp INS             &kp DEL         &kp LS(TAB)    &kp DOT                                                                           &kp LS(FSLH)       &kp LBKT      &kp RBKT  &kp LS(COMMA)   &kp LS(DOT)          &kp SEMI
+  &none           &kp SPACE             &kp ESC             &kp RET             &kp TAB  &kp COMMA                                                                             &kp LS(N9)     &kp LS(N0)  &kp LS(LBKT)  &kp LS(RBKT)     &kp EQUAL        &kp LS(N6)
  &trans            &kp BSLH           &kp GRAVE             &kp SQT         &kp LS(SQT)   &kp SEMI              &none   &none   &none  &kp LS(N8)       &kp DOT    &kp BSLH      &kp MINUS  &kp LS(EQUAL)    &kp LS(N8)      &kp FSLH  &kp LS(MINUS)     &kp LS(BSLH)
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD             &tog LAYER_Symbol   &none   &none  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N5)                 &kp LS(SQT)        &kp SQT     &kp COMMA  &kp LS(GRAVE)          &dot_dot
             >;
