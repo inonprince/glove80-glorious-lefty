@@ -962,7 +962,7 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 5,
       "g": true,
       "c": "#cccccc",
       "f2": 2,
@@ -1053,18 +1053,21 @@
     "G",
     {
       "t": "#000000",
-      "p": "CHICKLET",
+      "p": "SA SPACE",
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 5,
-      "g": true,
-      "c": "#cccccc",
+      "f": 3,
+      "g": false,
+      "c": "#ffff8d",
       "f2": 2,
+      "fa": [
+        9
+      ],
       "x": 15.25
     },
-    "",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMagic",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -1108,19 +1111,6 @@
       "x": 3.0,
       "y": -0.5
     },
-    "Page up",
-    {
-      "t": "#000000",
-      "p": "CHICKLET",
-      "sm": "kailh-choc",
-      "sb": "kailh",
-      "st": "Kailh Choc v1",
-      "a": 7,
-      "f": 3,
-      "g": true,
-      "c": "#cccccc",
-      "f2": 2
-    },
     "Page down",
     {
       "t": "#000000",
@@ -1142,7 +1132,20 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 4,
+      "g": true,
+      "c": "#cccccc",
+      "f2": 2
+    },
+    "\n\n\n\nTyping",
+    {
+      "t": "#000000",
+      "p": "CHICKLET",
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
+      "a": 7,
+      "f": 4,
       "g": true,
       "c": "#cccccc",
       "f2": 2,
@@ -1164,17 +1167,17 @@
     "",
     {
       "t": "#000000",
-      "p": "CHICKLET",
+      "p": "SA SPACE",
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 4,
-      "g": true,
-      "c": "#cccccc",
+      "f": 3,
+      "g": false,
+      "c": "#ffff8d",
       "f2": 2
     },
-    ""
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMagic"
   ],
   [
     {
@@ -1194,20 +1197,17 @@
     "R6",
     {
       "t": "#000000",
-      "p": "SA SPACE",
+      "p": "CHICKLET",
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
       "f": 3,
-      "g": false,
-      "c": "#ffff8d",
-      "f2": 2,
-      "fa": [
-        9
-      ]
+      "g": true,
+      "c": "#cccccc",
+      "f2": 2
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMagic",
+    "Page up",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -1255,17 +1255,15 @@
     "macOS\non/off\n\n\n\n\n<i class='fa fa-apple'></i>",
     {
       "t": "#000000",
-      "p": "SA SPACE",
+      "p": "CHICKLET",
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
       "f": 3,
-      "g": false,
-      "c": "#ffff8d",
-      "f2": 2
+      "g": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMagic",
+    "",
     {
       "t": "#9E9E9E",
       "p": "CHICKLET",
@@ -1494,24 +1492,15 @@
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
-      "a": 5,
+      "a": 7,
       "f": 3,
-      "g": false,
-      "c": "#d1c4e9",
+      "g": true,
+      "c": "#cccccc",
       "f2": 2,
-      "fa": [
-        2,
-        2,
-        0,
-        0,
-        0,
-        0,
-        5
-      ],
       "x": 0.9000000000000004,
       "y": -0.27500000000000036
     },
-    "Factory\non/off\n\n\nFactory\n\n<i class='fa fa-sign-out'></i>"
+    "\n\n\n\nLower"
   ],
   [
     {
@@ -1585,7 +1574,7 @@
       "x": -1.9000000000000004,
       "y": -0.27500000000000036
     },
-    "\n\n\n\nLower"
+    ""
   ],
   [
     {
@@ -1595,14 +1584,14 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 4,
+      "f": 3,
       "g": true,
       "c": "#cccccc",
       "f2": 2,
       "x": -1.6999999999999993,
       "y": 0.15000000000000036
     },
-    "\n\n\n\nTyping"
+    "\n\n\n\nMouse"
   ],
   [
     {
@@ -1658,7 +1647,7 @@
       "x": -1.25,
       "y": -0.27500000000000036
     },
-    ""
+    "\n\n\n\nSystem"
   ],
   [
     {
@@ -1668,14 +1657,15 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 5,
       "g": true,
       "c": "#cccccc",
       "f2": 2,
+      "n": true,
       "x": -0.8499999999999996,
       "y": 0.15000000000000036
     },
-    "\n\n\n\nMouse"
+    "\n\n\n\nSymbol"
   ],
   [
     {
@@ -1731,7 +1721,7 @@
       "x": -0.5999999999999996,
       "y": -0.27500000000000036
     },
-    "\n\n\n\nSystem"
+    ""
   ],
   [
     {
@@ -1741,14 +1731,13 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 5,
+      "f": 3,
       "g": true,
       "c": "#cccccc",
       "f2": 2,
-      "n": true,
       "y": 0.09999999999999964
     },
-    "\n\n\n\nSymbol"
+    ""
   ],
   [
     {

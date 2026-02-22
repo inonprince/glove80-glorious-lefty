@@ -193,9 +193,9 @@
       "st": "Kailh Choc v1",
       "a": 7,
       "f": 5,
-      "g": true
+      "g": false
     },
-    "",
+    "LANG2",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -204,9 +204,9 @@
       "st": "Kailh Choc v1",
       "a": 7,
       "f": 3,
-      "g": true
+      "g": false
     },
-    "\n\n\n\nLower"
+    "F20"
   ],
   [
     {
@@ -251,7 +251,7 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 5,
       "g": true,
       "x": 15.25
     },
@@ -266,7 +266,7 @@
       "f": 3,
       "g": true
     },
-    "",
+    "\n\n\n\nLower",
     {
       "t": "#9E9E9E",
       "p": "CHICKLET",
@@ -307,7 +307,7 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 5,
+      "f": 6,
       "g": true,
       "c": "#cccccc",
       "x": 3.0,
@@ -386,9 +386,8 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 6,
-      "g": true,
-      "c": "#cccccc"
+      "f": 3,
+      "g": true
     },
     "",
     {
@@ -398,9 +397,8 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 5,
-      "g": true,
-      "c": "#cccccc"
+      "f": 3,
+      "g": true
     },
     "",
     {
@@ -415,7 +413,7 @@
       "c": "#cccccc",
       "x": 16.25
     },
-    "",
+    "\n\n\n\nLower",
     {
       "t": "#9E9E9E",
       "p": "CHICKLET",
@@ -555,9 +553,8 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 6,
-      "g": true,
-      "c": "#cccccc"
+      "f": 3,
+      "g": true
     },
     "",
     {
@@ -734,7 +731,7 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 5,
+      "f": 6,
       "g": true,
       "c": "#cccccc"
     },
@@ -1072,23 +1069,23 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 5,
       "g": true,
       "c": "#cccccc"
     },
-    "\n\n\n\nLower",
+    "",
     {
       "t": "#000000",
       "p": "CHICKLET",
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
-      "a": 7,
-      "f": 5,
+      "a": 5,
+      "f": 3,
       "g": true,
       "c": "#cccccc"
     },
-    ""
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\nLower\n\nPause"
   ],
   [
     {
@@ -1143,12 +1140,12 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 4,
+      "f": 3,
       "g": true,
       "c": "#cccccc",
       "x": 15.25
     },
-    "",
+    "\n\n\n\nLower",
     {
       "t": "#9E9E9E",
       "p": "CHICKLET",
@@ -1210,7 +1207,7 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 5,
       "g": true,
       "c": "#cccccc",
       "x": 15.0,
@@ -1240,7 +1237,7 @@
       "g": true,
       "c": "#cccccc"
     },
-    "\n\n\n\nLower"
+    ""
   ],
   [
     {
@@ -1269,7 +1266,7 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 5,
+      "f": 3,
       "g": true,
       "c": "#cccccc",
       "x": 17.75,
@@ -1282,12 +1279,12 @@
       "sm": "kailh-choc",
       "sb": "kailh",
       "st": "Kailh Choc v1",
-      "a": 5,
+      "a": 7,
       "f": 3,
       "g": true,
       "c": "#cccccc"
     },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\nLower\n\nPause"
+    "\n\n\n\nLower"
   ],
   [
     {
@@ -1485,13 +1482,13 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3,
+      "f": 5,
       "g": true,
       "c": "#cccccc",
       "x": 0.9000000000000004,
       "y": -0.27500000000000036
     },
-    "\n\n\n\nLower"
+    ""
   ],
   [
     {

@@ -985,13 +985,13 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 4,
-      "c": "#cccccc",
+      "f": 6,
       "g": false,
+      "c": "#e0f2f1",
       "x": 3.0,
       "y": -0.5
     },
-    "",
+    "<i class='fa fa-caret-up'></i>\n\n\n\nCtrl",
     {
       "t": "#000000",
       "p": "CHICKLET",
@@ -999,11 +999,11 @@
       "sb": "kailh",
       "st": "Kailh Choc v1",
       "a": 7,
-      "f": 4,
-      "c": "#cccccc",
-      "g": false
+      "f": 6,
+      "g": false,
+      "c": "#e0f2f1"
     },
-    "",
+    "<i class='fa fa-caret-down'></i>\n\n\n\nAlt",
     {
       "t": "#000000",
       "p": "CHICKLET",

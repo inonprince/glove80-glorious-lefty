@@ -10741,10 +10741,10 @@ macros {
         layer_Cursor {
             bindings = <
      &none      &none           &none           &none        &none                                                                                                                     &none                &none                &none                &none      &none
-     &none      &none           &none           &none        &none       &none                                                                                    &none          &kp LS(TAB)              &kp DEL              &kp INS              &kp ESC  &kp _C(A)
-     &none    &kp TAB       &kp _UNDO       &kp _REDO  &kp LS(TAB)    &kp _CUT                                                                                 &kp _CUT              &kp TAB             &kp BSPC            &kp SPACE              &kp RET  &kp _C(N)
+     &none      &none           &none           &none        &none       &none                                                                                    &none            &kp _HOME            &kp PG_DN            &kp PG_UP              &kp _END  &kp _C(A)
+     &none    &kp TAB       &kp _UNDO       &kp _REDO  &kp LS(TAB)    &kp _CUT                                                                                 &kp _CUT          &kp LS(TAB)              &kp DEL              &kp INS              &kp ESC  &kp _C(N)
  &sk LSHFT   &kp LEFT        &kp DOWN          &kp UP    &kp RIGHT   &kp _COPY                                                                                &kp _COPY  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD  &kp _C(S)
- &kp _C(L)    &kp F19         &kp F18         &kp F17      &kp F16  &kp _PASTE  &extend_word  &extend_line  &select_none   &none   &none              &none  &kp _PASTE            &kp _HOME            &kp PG_DN            &kp PG_UP             &kp _END  &kp _C(W)
+ &kp _C(L)    &kp F19         &kp F18         &kp F17      &kp F16  &kp _PASTE  &extend_word  &extend_line  &select_none   &none   &none              &none  &kp _PASTE              &kp TAB             &kp BSPC            &kp SPACE              &kp RET  &kp _C(W)
  &kp _C(K)  &kp _C(H)  &kp _FIND_PREV  &kp _FIND_NEXT    &kp _FIND              &select_word  &select_line   &select_all   &none   &none  &tog LAYER_Cursor                         &kp LEFT             &kp DOWN               &kp UP            &kp RIGHT  &kp _C(Q)
             >;
         };
