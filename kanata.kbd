@@ -1,0 +1,244 @@
+;; Glove80 "Glorious Lefty" Dvorak → Kanata for MacBook Pro
+;; Based on Sunaku's Glorious Engrammer v42-rc9
+;;
+;; IMPORTANT: Set macOS keyboard input source to QWERTY.
+;; Kanata handles the Dvorak remapping.
+
+(defcfg
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+  macos-dev-names-include (
+    "Apple Internal Keyboard / Trackpad"
+  )
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Timing variables
+;; ═══════════════════════════════════════════════════════
+
+(defvar
+  ;; Streak detection (≈ ZMK require-prior-idle-ms)
+  ;; If 3 keys pressed within 450ms → "typing fast" →
+  ;; home row keys always tap (no accidental mods).
+  streak-count 3
+  streak-time 450
+
+  ;; Per-finger hold times (ms to hold before mod activates)
+  pinky-hold 270    ;; Ctrl (slowest finger)
+  ringy-hold 240    ;; Alt/Option
+  middy-hold 210    ;; Cmd
+  index-hold 180    ;; Shift (fastest finger)
+
+  ;; Thumb/bottom row hold time
+  thumb-hold 200
+
+  ;; Same-hand key lists for bilateral enforcement.
+  ;; Keys in these lists trigger early TAP.
+  ;; Keys NOT in these lists (opposite hand) trigger HOLD.
+  ;; Home row mod positions (a,s,d,f / j,k,l,;) excluded
+  ;; so multi-mod combos resolve via timeout.
+  lkeys (grv 1 2 3 4 5 tab q w e r t caps g lsft z x c v b lctl lalt lmet)
+  rkeys (6 7 8 9 0 - = bspc y u i o p [ ] \ h ' ret n m , . / rsft rmet ralt)
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Home row mod templates
+;; ═══════════════════════════════════════════════════════
+;;
+;; flowtap:  typing fast → flow action | idle → tap action
+;; hrm:      bilateral enforcement + streak detection
+;; lhrm/rhrm: left/right hand shortcuts
+
+(deftemplate flowtap (flow tap)
+  (switch
+    ((key-timing $streak-count less-than $streak-time)) $flow break
+    () $tap break
+  )
+)
+
+(deftemplate hrm (char mod keys ht)
+  (t! flowtap
+    (tap-hold-release-keys 0 $ht $char $mod $keys)
+    (tap-hold-release 0 $ht $char $mod)
+  )
+)
+
+(deftemplate lhrm (char mod ht)
+  (t! hrm $char $mod $lkeys $ht)
+)
+
+(deftemplate rhrm (char mod ht)
+  (t! hrm $char $mod $rkeys $ht)
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Source layout (physical MacBook QWERTY positions)
+;; F-row and fn omitted — they pass through to macOS.
+;; ═══════════════════════════════════════════════════════
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt lmet           spc            rmet ralt left down up   rght
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Dvorak base layer
+;; ═══════════════════════════════════════════════════════
+;;
+;; Number row:  `  1  2  3  4  5  6  7  8  9  0  [  ]
+;; Top row:     Tab '  ,  .  P  Y  F  G  C  R  L  /  =  \
+;; Home row:    Esc A° O° E° U° I  D  H° T° N° S° -  Ret
+;; Bottom row:  Sft ;  Q  J  K  X  B  M  W  V  Z  Sft
+;; Thumb row:   Lck Tab Bsp       Spc       Ent Del ← ↓ ↑ →
+;; Lck = Layer Lock: press, then press a layer key to lock it.
+;;
+;; ° = home row mod (tap=letter, hold=modifier)
+
+(deflayer dvorak
+  grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
+  @cap @a_c @o_a @e_m @u_s i    d    @h_s @t_m @n_a @s_c -    ret
+  lsft ;    q    j    k    x    b    m    w    v    z    rsft
+  @lp  @lt  @lbs           @spc           @ren @rdn left down up   rght
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Locker layer (press Left Ctrl to toggle)
+;; ═══════════════════════════════════════════════════════
+;;
+;; Hold Left Ctrl → locker active → press a layer thumb key
+;; → locks that layer. Release Left Ctrl → locker off.
+;; Tap the same layer thumb key again → unlock.
+
+(deflayer locker
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @lk-sym        @lk-cur        @lk-num @lk-fn _    _    _    _
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Cursor layer (hold Space)
+;; ═══════════════════════════════════════════════════════
+;;
+;; Left hand: clipboard ops (top), bare modifiers (home)
+;; Right hand: arrow navigation, line/word movement
+
+(deflayer cursor
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    M-z  M-x  M-c  M-v  M-S-z _   pgup up   pgdn _    _    _    _
+  _    lctl lalt lmet lsft _    M-left left down rght M-rght _ _
+  _    M-a  _    _    _    _    _    A-left _    A-rght _    _
+  _    _    _              @lk-cur        _    _    _    _    _    _
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Symbol layer (hold Left Cmd key)
+;; ═══════════════════════════════════════════════════════
+;;
+;;   {  &  *  (  }
+;;   :  $  %  ^  +
+;;   ~  !  @  #  |
+;;            )
+
+(deflayer symbol
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    S-[  S-7  S-8  S-9  S-]  _    _    _    _    _    _    _    _
+  _    S-;  S-4  S-5  S-6  S-=  _    rsft rmet ralt rctl _    _
+  _    S-grv S-1 S-2  S-3  S-\  _    _    _    _    _    _
+  _    _    @lk-sym        S-0            _    _    _    _    _    _
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Number layer (hold Right Cmd key)
+;; ═══════════════════════════════════════════════════════
+;;
+;;   [  7  8  9  ]
+;;   ;  4  5  6  =
+;;   `  1  2  3  \
+;;            0
+
+(deflayer number
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    [    7    8    9    ]    _    _    _    _    _    _    _    _
+  _    ;    4    5    6    =    _    rsft rmet ralt rctl _    _
+  _    grv  1    2    3    \    _    _    _    _    _    _
+  _    _    _              0              @lk-num _    _    _    _    _
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Function layer (hold Right Option key)
+;; ═══════════════════════════════════════════════════════
+;;
+;;   F12 F7  F8  F9
+;;   F11 F4  F5  F6
+;;   F10 F1  F2  F3
+
+(deflayer function
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    f12  f7   f8   f9   _    _    _    _    _    _    _    _    _
+  _    f11  f4   f5   f6   _    _    rsft rmet ralt rctl _    _
+  _    f10  f1   f2   f3   _    _    _    _    _    _    _
+  _    _    _              _              _    @lk-fn _    _    _    _
+)
+
+;; ═══════════════════════════════════════════════════════
+;; Aliases
+;; ═══════════════════════════════════════════════════════
+
+(defalias
+  ;; ── Home row mods (Dvorak, macOS CAGS order) ──────────
+  ;; Left hand: A=Ctrl, O=Alt, E=Cmd, U=Shift
+  a_c (t! lhrm a lctl $pinky-hold)
+  o_a (t! lhrm o lalt $ringy-hold)
+  e_m (t! lhrm e lmet $middy-hold)
+  u_s (t! lhrm u lsft $index-hold)
+
+  ;; Right hand: H=Shift, T=Cmd, N=Alt, S=Ctrl
+  h_s (t! rhrm h rsft $index-hold)
+  t_m (t! rhrm t rmet $middy-hold)
+  n_a (t! rhrm n ralt $ringy-hold)
+  s_c (t! rhrm s rctl $pinky-hold)
+
+  ;; ── Caps Lock → Esc / Caps Word ────────────────────
+  ;; Tap: Esc | Double-tap: Caps Word (auto-off after word)
+  cap (tap-dance 200 (esc (caps-word 2000)))
+
+  ;; ── Bottom row (thumb key substitutes) ─────────────
+  ;; Left Ctrl → Layer Lock (locker active while held)
+  lp  (layer-while-held locker)
+
+  ;; Left Option → tap: Tab, hold: Hyper (Cmd+Alt+Ctrl+Shift)
+  lt  (tap-hold-release 0 $thumb-hold tab (multi lctl lalt lmet lsft))
+
+  ;; Left Cmd → tap: Backspace, hold: Symbol layer
+  lbs (tap-hold-release 0 $thumb-hold bspc (layer-while-held symbol))
+
+  ;; Space → tap: Space, hold: Cursor layer
+  spc (tap-hold-release 0 $thumb-hold spc (layer-while-held cursor))
+
+  ;; Right Cmd → tap: Enter, hold: Number layer
+  ren (tap-hold-release 0 $thumb-hold ret (layer-while-held number))
+
+  ;; Right Option → tap: Delete, hold: Function layer
+  rdn (tap-hold-release 0 $thumb-hold del (layer-while-held function))
+
+  ;; ── Layer lock ────────────────────────────────────────
+  ;; Fake keys persist independently of the locker layer.
+  ;; toggle = press (lock) on first use, release (unlock) on second.
+  lk-cur (on-press-fakekey cur-lock toggle)
+  lk-sym (on-press-fakekey sym-lock toggle)
+  lk-num (on-press-fakekey num-lock toggle)
+  lk-fn  (on-press-fakekey fn-lock toggle)
+)
+
+(deffakekeys
+  cur-lock (layer-while-held cursor)
+  sym-lock (layer-while-held symbol)
+  num-lock (layer-while-held number)
+  fn-lock  (layer-while-held function)
+)
