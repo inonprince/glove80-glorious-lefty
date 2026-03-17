@@ -43,12 +43,12 @@ static int tap_encoded(uint32_t encoded, int64_t timestamp) {
 }
 
 static int send_kvm_sequence(bool send_two, int64_t timestamp) {
-    int err = tap_encoded(LCTRL, timestamp);
+    int err = tap_encoded(RCTRL, timestamp);
     if (err) {
         return err;
     }
 
-    err = tap_encoded(LCTRL, timestamp);
+    err = tap_encoded(RCTRL, timestamp);
     if (err) {
         return err;
     }
